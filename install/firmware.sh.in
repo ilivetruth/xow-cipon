@@ -2,7 +2,7 @@
 
 set -eu
 
-firmware="#FIRMWARE#"
+firmware="/lib/firmware/xow_dongle.bin"
 terms_url="https://www.microsoft.com/en-us/legal/terms-of-use"
 
 skip_disclaimer=0
@@ -10,7 +10,7 @@ skip_disclaimer=0
 usage() {
     echo "Usage: $(basename "$0") [OPTIONS]"
     echo
-    echo "Downloads the firmware required by xow. Saved as $firmware"
+    echo "Downloads the 2015 firmware required by xow. Saved as $firmware"
     echo
     echo "OPTIONS"
     echo
@@ -64,8 +64,7 @@ disclaimer() {
 }
 
 get_firmware() {
-    url="http://download.windowsupdate.com/c/msdownload/update/driver/drvs/2017/07/1cd6a87c-623f-4407-a52d-c31be49e925c_e19f60808bdcbfbd3c3df6be3e71ffc52e43261e.cab"
-    sum="48084d9fa53b9bb04358f3bb127b7495dc8f7bb0b3ca1437bd24ef2b6eabdf66"
+    url="https://catalog.s.download.windowsupdate.com/d/msdownload/update/driver/drvs/2015/12/20810869_8ce2975a7fbaa06bcfb0d8762a6275a1cf7c1dd3.cab"
     cwd=$(pwd)
     tmp=$(mktemp -d)
 
@@ -75,11 +74,9 @@ get_firmware() {
     cabextract -F FW_ACC_00U.bin driver.cab
     rm driver.cab
 
-    echo "$sum" FW_ACC_00U.bin | sha256sum -c
-
-    destdir=$(dirname $firmware)
+    destdir=$(dirname "$firmware")
     [ -e "$destdir" ] || mkdir -p "$destdir"
-    mv "$(pwd)"/FW_ACC_00U.bin "$firmware"
+    mv FW_ACC_00U.bin "$firmware"
 
     cd "$cwd" >/dev/null 2>&1
     rmdir "$tmp"
