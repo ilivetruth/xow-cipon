@@ -26,20 +26,6 @@ xow is a Linux user mode driver for the Xbox One wireless dongle.
 It communicates with the dongle via `libusb` and provides joystick input through the `uinput` kernel module.
 The input mapping is based on existing kernel drivers like [xpad](https://github.com/paroj/xpad).
 
-## Supported devices
-
-xow supports both versions of the wireless dongle (slim and bulky one) and the Surface Book 2's built-in adapter.
-The following Xbox One controllers are currently compatible with the driver:
-
-| Model number | Year | Additional information    | Status       |
-|--------------|------|---------------------------|--------------|
-| 1537         | 2013 | Original controller       | **Working**  |
-| 1697         | 2015 | Audio jack                | **Working**  |
-| 1698         | 2015 | Elite controller          | **Working**  |
-| 1708         | 2016 | Bluetooth connectivity    | **Working**  |
-| 1797         | 2019 | Elite controller series 2 | **Working**  |
-| 1914         | 2020 | Share button and USB-C    | **Untested** |
-
 ## Releases
 
 ### Linux distributions
