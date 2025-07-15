@@ -1,23 +1,3 @@
-<p align="center">
-    <img src="assets/logo.png" alt="Logo">
-</p>
-
-<p align="center">
-    <a href="https://github.com/medusalix/xow/actions">
-        <img src="https://img.shields.io/github/workflow/status/medusalix/xow/Continuous%20Integration" alt="Build Badge">
-    </a>
-    <a href="https://github.com/medusalix/xow/releases/latest">
-        <img src="https://img.shields.io/github/v/release/medusalix/xow" alt="Release Badge">
-    </a>
-    <a href="https://discord.gg/FDQxwWk">
-        <img src="https://img.shields.io/discord/733964971842732042" alt="Discord Badge">
-    </a>
-</p>
-
-<p align="center">
-  <img src="assets/screenshot.png" alt="Screenshot">
-</p>
-
 ## About
 
 ## This is a fork of the original project, to use the older drivers (from 2015), which are required to make this work with the Cipon 3rd party adapter
