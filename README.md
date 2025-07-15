@@ -18,11 +18,10 @@
   <img src="assets/screenshot.png" alt="Screenshot">
 </p>
 
-# This project is in maintenance mode
-
-Upgrading to [xone](https://github.com/medusalix/xone) is *highly recommended*!
-
 ## About
+
+## This is a fork of the original project, to use the older drivers (from 2015), which are required to make this
+## The Cipon 3rd party adapter
 
 xow is a Linux user mode driver for the Xbox One wireless dongle.
 It communicates with the dongle via `libusb` and provides joystick input through the `uinput` kernel module.
